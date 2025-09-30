@@ -48,6 +48,6 @@ if __name__ == "__main__":
         times.sort()  # Sort timestamps for this IP
         print(f"{ip}: [")
         for ts in times:
-            print(f"  {ts}")  
+            print(f"  {ts}") # Print each timestamp
         print("],")  # End of list for this IP
         print()  # Blank line between IPs

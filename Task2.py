@@ -55,9 +55,14 @@ for ip, times in per_ip_timestamps.items():
                 "last": times[j].isoformat()
             })
 
-            for incident in incidents:       
-                print(f"'ip': {incident['ip']}, 'count': {incident['count']}, 'first': {incident['first']}, 'last;: {incident['last']}")
 
             i = j + 1
         else:
             i += 1
+
+incident_count = len(incidents) #counts all items in a list , in this case number of items in incidents list
+print(f"Detetced : {incident_count} brute force incidents")
+
+
+for incident in incidents[:5]:  #print first 5 incidents  
+    print(f"'ip': {incident['ip']}, 'count': {incident['count']}, 'first': {incident['first']}, 'last;: {incident['last']}")
